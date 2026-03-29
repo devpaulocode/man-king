@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+}
+
+.gold-gradient {
+  @apply bg-gradient-to-br from-[#D4AF37] via-[#F9E27D] to-[#B8860B] text-transparent bg-clip-text;
+}
+
+.gold-button {
+  @apply bg-gradient-to-br from-[#D4AF37] to-[#B8860B] text-black font-bold py-3 px-8 rounded-full hover:opacity-90 transition-all active:scale-95 flex items-center justify-center;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
